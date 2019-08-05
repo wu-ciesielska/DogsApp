@@ -1,0 +1,18 @@
+<% include ./partials/header2.ejs %>
+
+    <div class="container userFormContainer">
+        <div class="jumbotron jumbotronTransparent">
+            <h1>Sign up</h1>
+            <form action="/register" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="password" placeholder="Password" required>
+                </div>
+                <button class="btn btn-dark"type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+
+<% include ./partials/footer.ejs %>

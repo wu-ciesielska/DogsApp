@@ -1,0 +1,15 @@
+<% include ../partials/header2.ejs %>
+
+<div class="container">
+    <div class="jumbotron formJumbotron jumbotronTransparent"> 
+        <h2 class="pl-1 pb-2">Add comment</h2>
+        <form action="/dogs/<%= dog._id %>/comments" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="comment[text]" placeholder="Comment on <%= dog.name %>" required>
+            </div>
+            <button class="btn btn-dark"type="submit">Add comment</button>
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>

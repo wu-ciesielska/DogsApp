@@ -1,0 +1,15 @@
+<% include ../partials/header2.ejs %>
+
+<div class="container">
+    <div class="jumbotron formJumbotron jumbotronTransparent"> 
+        <h2 class="pl-1 pb-2">Edit comment</h2>
+        <form action="/dogs/<%= dog_id %>/comments/<%= comment._id%>?_method=PUT" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="comment[text]" value="<%= comment.text %>" required>
+            </div>
+            <button class="btn btn-dark"type="submit">Edit comment</button>
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>

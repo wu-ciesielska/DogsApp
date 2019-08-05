@@ -1,0 +1,118 @@
+body {
+    padding-top: 4.0rem;
+}
+
+a {
+    color: rgb(175, 123, 70);
+}
+
+a:hover {
+    color: rgb(78, 50, 21);
+}
+
+nav a {
+    color: white;
+}
+
+#mainNavbar {
+    height: 4.0rem;
+    font-size: 1.5rem!important;
+    font-weight: 100;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://i.postimg.cc/L5JZxR56/dog4.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.buttonXS {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.commentSection {
+    width: 100%;
+    margin: 0.8rem;
+}
+
+.descSection {
+    margin: 0.8rem;
+}
+
+.formJumbotron {
+    width: 50%;
+    min-width: 400px;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.indexDogDescription {
+    padding: 7.0rem;
+}
+
+.indexDogImage {
+    width: 100%;
+}
+
+.jumbotronTransparent {
+    background-color: rgba(255, 255, 255, 0.7)!important;
+}
+
+.loginParagraph {
+    padding-top: 2.0rem;
+    margin-bottom: 0;
+}
+
+.navbarMargin {
+    margin-right: -1.0rem;
+    margin-left: -1.0rem;
+    padding-left: 1.0rem;
+}
+
+.nav-link:hover {
+    color: rgb(175, 123, 70)!important;
+}
+
+.padding0 {
+    padding: 0;
+}
+
+.pageName {
+    font-size: 2.2rem;
+}
+
+.showDogImage {
+    width: 100%;
+    padding-bottom: 150%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.showDogJumbotron {
+    padding: 2rem;
+}
+
+.square {
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.square-img {
+    background-size: cover;
+    background-position: center center;
+}
+
+.userFormContainer {
+    width: 40%;
+    min-width: 400px;
+    margin: auto;
+    margin-top: 5vw;
+}
+
+.userId {
+    color: grey;
+}

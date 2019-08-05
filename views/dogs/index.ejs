@@ -1,0 +1,35 @@
+<% include ../partials/header.ejs %>
+
+<div class=" padding0">
+    <section class="container-fluid px-0">
+        <% dogs.forEach(function(dog){ %>
+            <div class="row align-items-center">
+                <% if(dogs.indexOf(dog) % 2 === 0){ %>
+                    <div class="col-lg-6 padding0">
+                        <div class="indexDogDescription">
+                            <h1><%= dog.breed %> <%= dog.name %></h1>
+                            <p><%= dog.description.substring(0, 300) %>...</p>
+                            <a href="/dogs/<%= dog._id %>">Read More About <%= dog.name %></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 padding0">
+                        <div class="square square-img" style="background-image:url(<%= dog.image %>)"></div>
+                    </div>
+                <% } else { %>
+                    <div class="col-lg-6 order-2 order-lg-1 padding0">
+                        <div class="square square-img" style="background-image:url(<%= dog.image %>)"></div>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 padding0">
+                        <div class="indexDogDescription">
+                            <h1><%= dog.breed %> <%= dog.name %></h1>
+                            <p><%= dog.description.substring(0, 300) %>...</p>
+                            <a href="/dogs/<%= dog._id %>">Read More About <%= dog.name %></a>
+                        </div>
+                    </div>
+                <% }%>
+            </div>
+        <% }); %>
+    </section>
+</div>
+
+<% include ../partials/footer.ejs %>

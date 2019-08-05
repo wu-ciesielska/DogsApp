@@ -1,0 +1,59 @@
+<% include ../partials/header.ejs %>
+
+<div class="container">
+    <div class="jumbotron showDogJumbotron">    
+        <div class="row">
+            <div class="col-lg-6 d-flex justify-content-center">
+                <div class="showDogImage" style="background-image: url(<%= dog.image %>)"></div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center">
+                <div class="descSection">   
+                    <h1>Meet <%= dog.name %>!</h1>
+                    <p><strong>Breed:</strong> <%= dog.breed %></p>
+                    <p><strong>Age:</strong> <%= dog.age %></p>
+                    <h5>More about <%= dog.name %></h5>
+                    <p><%= dog.description %></p>
+                    <p class="text-right"><em>Submitted by <%= dog.author.username %></em></p>
+                    <div class="row justify-content-end">
+                        <% if(currentUser && dog.author.id.equals(currentUser._id)){%>
+                            <a class="btn btn-outline-secondary m-1" href="/dogs/<%= dog._id %>/edit">Edit</a>
+                            <form class="d-inline-block m-1" action="/dogs/<%= dog._id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-outline-danger">Delete</button>
+                            </form>
+                        <% } %>
+                            
+                    </div> 
+                </div>
+            </div>
+            <div class="card mt-3 p-3 commentSection">
+                <div class="text-right">
+                    <a class="btn btn-outline-dark btn-sm" href="/dogs/<%= dog._id %>/comments/new">Add new comment</a>
+                </div>
+                <% dog.comments.forEach(function(comment){ %>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="m-1">
+                                <strong><%= comment.author.username %></strong>
+                                <p class="mt-2">
+                                    <%= comment.text %>
+                                </p>
+                                
+                                <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                                    <div class="d-inline-block">
+                                        <a class="btn btn-sm btn-outline-secondary buttonXS" href="/dogs/<%= dog._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                                        <form class="d-inline-block" action="/dogs/<%= dog._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                            <button class="btn btn-sm btn-outline-danger buttonXS">Delete</button>
+                                        </form>
+                                    </div>
+                                <% }; %>
+                            <hr/>
+                            </div>    
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>
