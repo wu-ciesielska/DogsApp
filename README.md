@@ -13,4 +13,4 @@ Run "npm install" inside this project folder to install all dependencies.
 
 Open app.js file in your editor and set up proper database connection in connectionString variable. This project uses MongoDB. You can use either local or cloud instance of database.
 
-Run "node app.js" inside this project folder to run the project.
+Run "node app.js" inside this project folder to run the project. Application will start on your defaulf port for Node.js instance.
